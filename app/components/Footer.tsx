@@ -46,7 +46,7 @@ export default function Footer() {
               <a href="#" className="block hover:text-white transition-colors">Anúnciate con nosotros</a>
             </div>
             <div className="mt-6 text-[10px] text-slate-500 leading-tight">
-              Los datos provienen de fuentes públicas como Numbeo, bancos centrales y reportes oficiales. 
+              Los datos provienen de fuentes públicas como Numbeo, bancos centrales y reportes oficiales.
               Verifica siempre la información más reciente.
             </div>
           </div>

@@ -20,49 +20,30 @@ export default function Navbar() {
           </div>
         </Link>
 
-        {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8 text-sm font-medium">
           <Link href="/" className="hover:text-emerald-600 transition-colors">Inicio</Link>
           <Link href="/paises" className="hover:text-emerald-600 transition-colors">Explorar Países</Link>
           <Link href="/paises" className="hover:text-emerald-600 transition-colors">Comparar</Link>
-          <a 
-            href="#como-funciona" 
-            className="hover:text-emerald-600 transition-colors"
-          >
-            Cómo funciona
-          </a>
+          <a href="#como-funciona" className="hover:text-emerald-600 transition-colors">Cómo funciona</a>
         </div>
 
         <div className="hidden md:flex items-center gap-4">
-          <Link 
-            href="/paises" 
-            className="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold rounded-xl transition-all active:scale-[0.985]"
-          >
+          <Link href="/paises" className="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold rounded-xl transition-all active:scale-[0.985]">
             Explorar todos los países
           </Link>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button 
-          onClick={() => setIsOpen(!isOpen)} 
-          className="md:hidden p-2 text-slate-600 hover:text-slate-900"
-          aria-label="Toggle menu"
-        >
+        <button onClick={() => setIsOpen(!isOpen)} className="md:hidden p-2 text-slate-600 hover:text-slate-900" aria-label="Toggle menu">
           {isOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden border-t border-slate-200 bg-white px-6 py-6 flex flex-col gap-4 text-sm font-medium">
           <Link href="/" className="py-1" onClick={() => setIsOpen(false)}>Inicio</Link>
           <Link href="/paises" className="py-1" onClick={() => setIsOpen(false)}>Explorar Países</Link>
           <Link href="/paises" className="py-1" onClick={() => setIsOpen(false)}>Comparar Costos</Link>
-          <Link 
-            href="/paises" 
-            className="mt-2 w-full text-center px-5 py-3 bg-emerald-600 text-white rounded-xl font-semibold"
-            onClick={() => setIsOpen(false)}
-          >
+          <Link href="/paises" className="mt-2 w-full text-center px-5 py-3 bg-emerald-600 text-white rounded-xl font-semibold" onClick={() => setIsOpen(false)}>
             Explorar todos los países
           </Link>
         </div>
