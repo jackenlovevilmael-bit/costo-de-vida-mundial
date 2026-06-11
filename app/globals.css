@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+:root {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  font-family: var(--font-geist-sans);
+}
+
+/* Premium minimal design system */
+h1, h2, h3 {
+  font-feature-settings: "tnum" "ss01";
+}
+
+.font-mono {
+  font-family: var(--font-geist-mono);
+}
+
+/* Smooth interactions - Core Web Vitals friendly */
+a, button, summary {
+  transition: color 0.1s ease, background-color 0.1s ease, border-color 0.1s ease, transform 0.1s ease;
+}
+
+button:active, a:active {
+  transform: scale(0.985);
+}
+
+/* Card & section polish */
+.border {
+  transition: border-color 0.2s ease;
+}
+
+/* Details/Summary FAQ styling */
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] summary {
+  margin-bottom: 0.5rem;
+}
+
+/* Table-like price rows */
+.price-row {
+  transition: background-color 0.1s ease;
+}
+
+.price-row:hover {
+  background-color: #f8fafc;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .text-6xl {
+    font-size: 3.25rem;
+    line-height: 1.05;
+  }
+  
+  .text-5xl {
+    font-size: 2.75rem;
+  }
+}
+
+/* Focus states for accessibility */
+input:focus, select:focus, button:focus-visible {
+  outline: 2px solid #10b981;
+  outline-offset: 2px;
+}
+
+/* Performance: reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
