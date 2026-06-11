@@ -73,7 +73,6 @@ export default function CountriesClient({ initialCountries, continents }: Props)
 
   return (
     <>
-      {/* Filters Bar */}
       <div className="sticky top-16 z-40 bg-white/95 backdrop-blur-md border border-slate-200 rounded-3xl p-5 mb-8 shadow-sm">
         <div className="flex flex-col lg:flex-row gap-4">
           <div className="flex-1 relative">
@@ -125,8 +124,6 @@ export default function CountriesClient({ initialCountries, continents }: Props)
 
         <div className="mt-3 text-xs text-slate-400 flex items-center gap-2">
           <Filter size={14} /> Mostrando <span className="font-mono text-emerald-600 font-medium">{filteredAndSorted.length}</span> de {initialCountries.length} países
-          {selectedContinent && <span className="text-emerald-600">• {selectedContinent}</span>}
-          {searchTerm && <span className="text-emerald-600">• "{searchTerm}"</span>}
         </div>
       </div>
 
@@ -171,10 +168,7 @@ export default function CountriesClient({ initialCountries, continents }: Props)
         <div className="text-center py-20">
           <div className="text-6xl mb-4">🔍</div>
           <div className="text-xl font-medium">No encontramos países con esos filtros</div>
-          <button 
-            onClick={() => { setSearchTerm(""); setSelectedContinent(""); }} 
-            className="mt-4 text-emerald-600 hover:underline text-sm"
-          >
+          <button onClick={() => { setSearchTerm(""); setSelectedContinent(""); }} className="mt-4 text-emerald-600 hover:underline text-sm">
             Limpiar filtros
           </button>
         </div>
